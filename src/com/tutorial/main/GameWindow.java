@@ -84,7 +84,7 @@ public class GameWindow extends Canvas{
 		frame.getContentPane().setBackground(Color.black);
 		
 		
-		
+		//LOL
 		
 		
 	}
