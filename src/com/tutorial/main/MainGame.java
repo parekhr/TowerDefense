@@ -5,13 +5,17 @@ public class MainGame {
 	public static void main(String[] args) {
 		
 		//Creates the window for the game
+		GameWindow gameWindow = new GameWindow();
 		
 		
-		GameWindow window;
-		window = new GameWindow(750, 600, "Tower Defense", "Options");
 		
 		
+		
+		
+	}	
+	
+}	
+	
 
-	}
-
-}
+	
+	

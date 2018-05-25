@@ -1,14 +1,23 @@
 package com.tutorial.main;
 
-public class Object {
+import java.awt.Color;
+import java.awt.Graphics;
+
+import javax.swing.JPanel;
+
+public class Object extends JPanel{
 	
-	private int velocityX = 1;
-	private int velocityY = 1;
-	
+	private static final long serialVersionUID = 1L;
 	public Object(){
 		
-		
 	}
+	
+	public void paint(Graphics g) {    
+		g.setColor(Color.CYAN);
+	    g.fillRect(200, 200, 200, 200);
+	     
+	}
+	
 	
 	
 

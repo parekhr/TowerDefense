@@ -1,33 +1,38 @@
 package com.tutorial.main;
-
-import java.awt.Canvas;
 import java.awt.Color;
-import java.awt.Dimension;
-
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
-public class GameWindow extends Canvas{
+public class GameWindow extends JFrame{
 
 	private static final long serialVersionUID = 1L;
 	
 	
 	
 	//Constructor
-	public GameWindow(int width, int height, String title, String menu1Title){
+	public GameWindow(){
 		
 		//Initializing all J-type variables
 		JFrame frame;
 		JMenuBar menuBar;
 		JMenu menu1;
 		JMenuItem pause, save, restart;
+		Object rectangle = new Object();
+		
+		//Icon for the game (atm, it is a maple shield)
+		String frameIcon = "MapleShieldIcon.png";
+		ImageIcon towerDefenseIcon = new ImageIcon(frameIcon);
 		
 		
 		
 		//Creates a title for the game
-		frame = new JFrame(title);
+		frame = new JFrame("Tower Defense");
+		
+		//The size of the frame
+		frame.setSize(750, 600);
 		
 		//Creates a menu bar
 		menuBar = new JMenuBar();
@@ -38,7 +43,7 @@ public class GameWindow extends Canvas{
 		//------------------------------------//
 		
 		//Creates a menu with a specific title
-		menu1 = new JMenu(menu1Title);
+		menu1 = new JMenu("Menu 1");
 		
 		//Adds the menu to the menu bar
 		menuBar.add(menu1);
@@ -69,11 +74,6 @@ public class GameWindow extends Canvas{
 		//Users will not be able to change the frame size
 		frame.setResizable(false);
 		
-		//These will take in the width and height and adjust the frame to their respective values within MainGame.java
-		frame.setPreferredSize(new Dimension(width, height));
-		frame.setMaximumSize(new Dimension(width, height));
-		frame.setMinimumSize(new Dimension(width, height));
-		
 		//Centers the frame
 		frame.setLocationRelativeTo(null);
 		
@@ -82,6 +82,12 @@ public class GameWindow extends Canvas{
 		
 		//Sets background color to black
 		frame.getContentPane().setBackground(Color.black);
+		
+		//Finds the icon and sets it to the frame
+		frame.setIconImage(towerDefenseIcon.getImage());
+		
+		frame.add(rectangle);
+		
 		
 		
 		
