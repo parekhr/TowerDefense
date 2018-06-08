@@ -20,9 +20,13 @@ public class GameWindow extends JFrame{
 		JMenuBar menuBar;
 		JMenu menu1;
 		JMenuItem pause, save, restart;
-		Object rectangle = new Object();
 		
-		//Icon for the game (atm, it is a maple shield)
+		//Instantiating all painted objects
+		Object panelGraphics = new Object();
+		
+		
+		
+		//Icon for the game (At the moment, it is a maple shield)
 		String frameIcon = "MapleShieldIcon.png";
 		ImageIcon towerDefenseIcon = new ImageIcon(frameIcon);
 		
@@ -31,8 +35,12 @@ public class GameWindow extends JFrame{
 		//Creates a title for the game
 		frame = new JFrame("Tower Defense");
 		
+		//Adding all the objects to the frame
+		frame.add(panelGraphics);
+		
 		//The size of the frame
-		frame.setSize(750, 600);
+		//frame.setSize(750, 600);
+		frame.setSize(1000, 700);
 		
 		//Creates a menu bar
 		menuBar = new JMenuBar();
@@ -81,12 +89,14 @@ public class GameWindow extends JFrame{
 		frame.setAutoRequestFocus(true);
 		
 		//Sets background color to black
-		frame.getContentPane().setBackground(Color.black);
+		frame.getContentPane().setBackground(Color.white);
 		
 		//Finds the icon and sets it to the frame
 		frame.setIconImage(towerDefenseIcon.getImage());
 		
-		frame.add(rectangle);
+		
+		
+		
 		
 		
 		
